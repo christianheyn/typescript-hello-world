@@ -34,9 +34,9 @@ const totalPriceOffer: number = offers.reduce(reduce, 0);
 
 console.log(totalPrice, totalPriceOffer);
 
-const makeStatusChange: Function = (x: DocStatus, y: DocStatus) => <T extends BilloDocument>(c: T) => ({
+const makeStatusChange = (srcStatus: DocStatus, destStatus: DocStatus) => <T extends BilloDocument>(c: T) => ({
     ...c,
-    status: (c.status === x) ? y : c.status,
+    status: (c.status === srcStatus) ? destStatus : c.status,
 });
 
 const openToCanceled: <T extends BilloDocument>(c: T) => T = makeStatusChange(DocStatus.OPEN, DocStatus.CANCELED);
