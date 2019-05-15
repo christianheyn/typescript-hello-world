@@ -1,0 +1,23 @@
+{
+  "name": "typescript-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc ./src/index.ts --outDir ./dist && node ./dist/index.js",
+    "watch:compile": "tsc --watch ./src/index.ts --outDir ./dist && node ./dist/index.js",
+    "help": "tsc --help"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "@types/node": "^12.0.2",
+    "@types/ramda": "^0.26.8",
+    "ramda": "^0.26.1"
+  }
+}
